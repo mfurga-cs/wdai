@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <title>Zadanie 7</title>
+    <title>Zadanie 6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -15,16 +16,16 @@
             <a href="#" class="nav-logo">LOGO</a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Page 1</a>
+                    <a href="#" class="nav-link">O mnie</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Page 2</a>
+                    <a href="#" class="nav-link">Produkty</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Page 3</a>
+                    <a href="#" class="nav-link">Kontakt</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Page 4</a>
+                    <a href="#" class="nav-link">Hobby</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -35,22 +36,6 @@
         </nav>
     </header>
 </body>
-<script>
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-const navLink = document.querySelectorAll(".nav-link");
+<script type="text/javascript" src="script.js"></script>
 
-hamburger.addEventListener("click", mobileMenu);
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
-
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}
-</script>
 </html>

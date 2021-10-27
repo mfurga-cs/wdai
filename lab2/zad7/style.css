@@ -20,16 +20,16 @@ a {
     text-decoration: none;
 }
 
-.header{
+.header {
     border-bottom: 1px solid #E2E8F0;
-    background:  #efefef;
+    background: #efefef;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 1rem 5rem;
 }
 
 .hamburger {
@@ -56,13 +56,13 @@ a {
     margin-left: 5rem;
 }
 
-.nav-link{
+.nav-link {
     font-size: 1.6rem;
     font-weight: 400;
     color: #475569;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: #482ff7;
 }
 
@@ -72,6 +72,7 @@ a {
 }
 
 @media only screen and (max-width: 800px) {
+
     .nav-menu {
         position: fixed;
         left: -100%;

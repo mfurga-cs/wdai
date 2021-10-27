@@ -33,7 +33,6 @@ a {
 
 .col {
     flex-grow: 1;
-    flex-basis: 0;
     -webkit-box-flex: 1;
     max-width: 100%;
 }
@@ -41,12 +40,10 @@ a {
 .nav-menu {
     display: flex;
     justify-content: space-between;
-    /*align-items: center;*/
 }
 
 .nav-menu a {
     color: #616161;
-    margin-left: 5px;
 }
 
 button {
@@ -67,10 +64,41 @@ button:hover {
 
 
 @media only screen and (max-width: 800px) {
-
     .navbar {
         padding: 20px 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .navbar {
+        padding: 20px 2px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    .nav-logo {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    button {
+        padding: 10px 5px;
+        font-size: 12px;
     }
 
 }
 
+@media only screen and (max-width: 400px) {
+
+    .nav-menu a {
+        font-size: 10px;
+    }
+
+    .nav-logo {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}

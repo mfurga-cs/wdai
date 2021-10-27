@@ -38,9 +38,6 @@ a {
 }
 
 .col {
-/*    flex-grow: 1;
-    flex-basis: 0;
-    -webkit-box-flex: 1;*/
     max-width: 100%;
 }
 
@@ -90,10 +87,22 @@ img {
 }
 
 @media only screen and (max-width: 800px) {
-
-.margin {
-    margin-right: 20px;
+    .margin {
+        margin-right: 20px;
+    }
 }
 
-}
+@media only screen and (max-width: 600px) {
 
+    .margin {
+        margin-right: 10px;
+    }
+
+    .btn {
+        padding: 20px 1px;
+        background: #ff2b2b;
+        border: 2px solid #002bca;
+        color: #fff;
+        font-size: 14px;
+    }
+}

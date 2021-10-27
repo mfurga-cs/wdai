@@ -18,7 +18,7 @@ h1 {
     color: #34eb7d;
     text-align: center;
     padding: 40px;
-    font-size :40px;
+    font-size: 40px;
 }
 
 a {
@@ -84,8 +84,7 @@ a {
     left: 15rem;
 }
 
-@media screen and (max-width: 1000px) 
-{
+@media screen and (max-width: 1000px) {
     .container {
         flex-direction: column;
     }

@@ -27,26 +27,6 @@ img {
     border-top-right-radius: 10px;
 }
 
-@media screen and (min-width: 1000px){
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1em;
-        margin: 30px 22%;
-    }
-}
-
-@media screen and (max-width: 1000px) 
-{
-    .container {
-        margin: 30px 15%;
-    }
-
-    .item {
-        margin-top: 10px;
-    }
-}
-
 .item {
     border-radius: 8px;
     box-shadow: 2px 2px 6px 0px #848484bf;
@@ -74,4 +54,23 @@ img {
 
 .button:hover {
     cursor: pointer;
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        margin: 30px 18%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        margin: 30px 10%;
+    }
+
+    .item {
+        margin-top: 10px;
+    }
 }
