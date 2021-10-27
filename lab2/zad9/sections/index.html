@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Zadanie 9</title>
+
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+
+            <div class="col">
+
+            <ul class="nav-menu" >
+                <li class="nav-item margin">
+                    <button class="btn">Home</button>
+                </li>
+                <li class="nav-item margin">
+                    <button class="btn">About us</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn">Services</button>
+                </li>
+            </ul>
+
+            </div>
+
+            <div class="col">
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                    <button class="btn"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign up</button>
+                    </li>
+                    <li class="nav-item">
+                    <button class="btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Login</button>
+                    </li>
+                </ul>
+
+            </div>       
+        </nav>
+    </header>
+
+    <div class="container">
+
+    <section id="sec1">
+        <img src="https://dummyimage.com/1200x800/a1a1a1/fff">      
+    </section>
+
+    <section id="sec2">
+        <img src="https://dummyimage.com/1200x800/a1a1a1/fff">      
+    </section>
+
+
+    <section id="sec3">
+        <img src="https://dummyimage.com/1200x800/a1a1a1/fff">      
+    </section>
+
+    <section id="sec4">
+        <img src="https://dummyimage.com/1200x800/a1a1a1/fff">      
+    </section>
+    </div>
+
+
+<script type="text/javascript">
+    
+$(function () {
+  $(document).scroll(function () {
+    var nav = $(".header");
+
+    var curr = $(this).scrollTop();
+
+    var sec1 = $("#sec1").offset().top;
+    var sec2 = $("#sec2").offset().top;
+    var sec3 = $("#sec3").offset().top;
+    var sec4 = $("#sec4").offset().top;
+
+    if (curr > sec1) {
+        $(".navbar").css("background", "#ffc6c6");
+        $(".navbar button").css("color", "#0006fb");
+    } else {
+        $(".navbar").css("background", "#fff");
+        $(".navbar button").css("color", "#fff");
+
+    }
+
+    if (curr > sec2) {
+        $(".navbar").css("background", "#ff8383");
+        $(".navbar button").css("color", "#00fb71");
+    }
+
+    if (curr > sec3) {
+        $(".navbar").css("background", "#ff4c4c");
+        $(".navbar button").css("color", "#fbe900");
+    }
+
+  });
+});
+
+</script>
+
+</body>
+</html>

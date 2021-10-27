@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Zadanie 12</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="background">
+                <div class="bgcolor" id="bgcolor"></div>
+                <img src="blue.png" alt="" class="shoe">
+                 <a href="#" class="share"><i class="fa fa-share-alt"></i></a>
+            </div>
+            <div class="info">
+                <div class="name">
+                    <div>
+                        <h1 class="big">Nike Zoom KD 12</h1>
+                        <span class="new">NEW</span>
+                    </div>
+                    <h3 class="small">Men's Running Shoes</h3>
+                </div>
+                <div class="description">
+                    <h2 class="title">PRODUCT INFO</h2>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                </div>
+                <div class="wrapper">
+                    <h3 class="title">COLOR</h3>
+                    <div class="wrapper-inner">
+                        <span class="color active" id="blue"></span>
+                        <span class="color" id="red"></span>
+                        <span class="color" id="green"></span>
+                        <span class="color" id="orange"></span>
+                        <span class="color" id="black"></span>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <h3 class="title">SIZE</h3>
+                    <div class="wrapper-inner">
+                        <span class="size">7</span>
+                        <span class="size">8</span>
+                        <span class="size">9</span>
+                        <span class="size">10</span>
+                        <span class="size">11</span>
+                    </div>
+                </div>
+                <div class="wrapper-inner" style="justify-content: space-between;align-items: center;">
+                    <a href="#" class="buy"><i class="fa fa-shopping-cart"></i>ADD TO CARD</a>
+                    <div class="price">
+                        <h1>$ 189.99</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const colors = document.querySelectorAll('.color');
+        colors.forEach(c => c.addEventListener('click', color));
+        function color() {
+            let color =  window.getComputedStyle(document.getElementById(this.id)).backgroundColor;
+            let back = document.getElementById("bgcolor");
+            back.style.backgroundImage = 'linear-gradient(45deg,' + color+ ', ' + color +')';
+            colors.forEach(c => c.classList.remove('active'));
+            colors.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+        }
+    </script>
+</body>
+</html>
