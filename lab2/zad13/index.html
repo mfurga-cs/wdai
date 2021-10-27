@@ -14,68 +14,60 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="card">
-            <div class="background">
-                <div class="bgcolor" id="bgcolor"></div>
-                <img src="blue.png" alt="" class="shoe">
-                 <a href="#" class="share"><i class="fa fa-share-alt"></i></a>
-            </div>
-            <div class="info">
-                <div class="name">
-                    <div>
-                        <h1 class="big">Nike Zoom KD 12</h1>
-                        <span class="new">NEW</span>
-                    </div>
-                    <h3 class="small">Men's Running Shoes</h3>
+    <div class="wrapper">
+        <header class="header">Header</header>
+        <nav class="main-nav">
+            Navigation
+        </nav>
+        <article class="content">
+            Main
+        </article>
+        <aside class="side">
+
+      <div class="profile-card">
+          <div class="profile-header">
+             
+          </div>
+          <div class="profile-body">
+                <div class="author-img">
+                    <img src="https://dummyimage.com/200x200/a6a6a6/ffffff" alt="">
                 </div>
-                <div class="description">
-                    <h2 class="title">PRODUCT INFO</h2>
-                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
+                <div class="name">Mateusz Furga</div>
+                <div class="title">Full Stack Developer</div>
+                <div class="intro">
+                   <p> 123-456-789</p>
                 </div>
-                <div class="wrapper">
-                    <h3 class="title">COLOR</h3>
-                    <div class="wrapper-inner">
-                        <span class="color active" id="blue"></span>
-                        <span class="color" id="red"></span>
-                        <span class="color" id="green"></span>
-                        <span class="color" id="orange"></span>
-                        <span class="color" id="black"></span>
-                    </div>
+                <div class="social-icon">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="wrapper">
-                    <h3 class="title">SIZE</h3>
-                    <div class="wrapper-inner">
-                        <span class="size">7</span>
-                        <span class="size">8</span>
-                        <span class="size">9</span>
-                        <span class="size">10</span>
-                        <span class="size">11</span>
-                    </div>
-                </div>
-                <div class="wrapper-inner" style="justify-content: space-between;align-items: center;">
-                    <a href="#" class="buy"><i class="fa fa-shopping-cart"></i>ADD TO CARD</a>
-                    <div class="price">
-                        <h1>$ 189.99</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
+          </div>
+      </div>
+
+        </aside>
+        <div class=""></div>
+        <div class="ad">Ads</div>
+        <footer class="main-footer">Footer</footer>
     </div>
-    <script type="text/javascript">
-        const colors = document.querySelectorAll('.color');
-        colors.forEach(c => c.addEventListener('click', color));
-        function color() {
-            let color =  window.getComputedStyle(document.getElementById(this.id)).backgroundColor;
-            let back = document.getElementById("bgcolor");
-            back.style.backgroundImage = 'linear-gradient(45deg,' + color+ ', ' + color +')';
-            colors.forEach(c => c.classList.remove('active'));
-            colors.forEach(c => c.classList.remove('active'));
-            this.classList.add('active');
-        }
-    </script>
 </body>
 </html>
