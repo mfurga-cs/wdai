@@ -6,35 +6,36 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-family: Arial, Helvetica, sans-serif;
 
 }
 
 .container {
-    padding: 50px;
+    padding: 30px;
 }
 
 .navigation {
-  width: 300px;
-
+    width: 300px;
 }
 
 .mainmenu {
-      border-radius: 10px;
+    border-radius: 10px;
 }
 
-.mainmenu, .submenu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.mainmenu,
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .mainmenu a {
-  display: block;
-  background-color: #ff5858;
-  text-decoration: none;
-  padding: 10px 20px;
+    display: block;
+    background-color: #ff5858;
+    text-decoration: none;
+    padding: 10px 20px;
     color: #fff;
 }
 
@@ -42,29 +43,36 @@ html, body {
     position: relative;
 }
 
+.mainmenu>li:first-child>a {
+    border-radius: 10px 10px 0 0;
+}
 
-.mainmenu > li:hover > .submenu {
-display: block;
-  max-height: 200px;
+.mainmenu>li:last-child>a {
+    border-radius: 0 0 10px 10px;
+}
+
+.mainmenu>li:hover>.submenu {
+    display: block;
+    max-height: 200px;
 }
 
 .submenu {
-  overflow: hidden;
-  max-height: 0;
-  -webkit-transition: all 0.5s ease-out;
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: all 0.5s ease-out;
 }
 
 .submenu a {
-  background-color: #004398;
-  position:relative;
+    background-color: #004398;
+    position: relative;
 }
 
 .submenu a:hover {
-  background: linear-gradient(180deg, #004398 50%, #005dd2 50%);
+    background: linear-gradient(180deg, #004398 50%, #005dd2 50%);
 }
 
 .submenu a:hover::before {
-    content:"\A";
+    content: "\A";
     border-style: solid;
     border-width: 19px 0 19px 10px;
     border-color: transparent transparent transparent #00ff08;
@@ -73,10 +81,9 @@ display: block;
     left: 0;
 }
 
-
-.mainmenu li:hover > .main::after{
+.mainmenu li:hover>.main::after {
     z-index: 100;
-    content:"\A";
+    content: "\A";
     border-style: solid;
     border-width: 10px 19px 0 19px;
     border-color: #ff5858 transparent transparent transparent;
