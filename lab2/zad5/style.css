@@ -25,6 +25,13 @@ img {
     display: block;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    margin: 30px 18%;
+}
+
 .item {
     border-radius: 8px;
     box-shadow: 2px 2px 6px 0px #848484bf;
@@ -88,18 +95,10 @@ img {
     cursor: pointer;
 }
 
-@media screen and (min-width: 1000px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1em;
-        margin: 30px 18%;
-    }
-}
-
 @media screen and (max-width: 1000px) {
     .container {
         margin: 30px 10%;
+        grid-template-columns: 1fr;
     }
 
     .item {
