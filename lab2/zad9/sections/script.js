@@ -1,29 +1,29 @@
-$(document).scroll(function() {
-    var nav = $(".header");
+window.addEventListener('scroll', function(e) {
+    let nav = document.getElementById("header");
 
-    var curr = $(this).scrollTop();
+    let curr = this.scrollY;
 
-    var sec1 = $("#sec1").offset().top;
-    var sec2 = $("#sec2").offset().top;
-    var sec3 = $("#sec3").offset().top;
-    var sec4 = $("#sec4").offset().top;
+    let sec1 = document.getElementById("sec1").offsetTop;
+    let sec2 = document.getElementById("sec2").offsetTop;
+    let sec3 = document.getElementById("sec3").offsetTop;
+    let sec4 = document.getElementById("sec4").offsetTop;
 
     if (curr > sec1) {
-        $(".navbar").css("background", "#ffc6c6");
-        $(".navbar button").css("color", "#0006fb");
+        document.getElementById("navbar").style.background = "#ffc6c6";
+        document.querySelectorAll("#navbar button").forEach(el => el.style.color = "#0006fb");
     } else {
-        $(".navbar").css("background", "#fff");
-        $(".navbar button").css("color", "#fff");
+        document.getElementById("navbar").style.background = "#fff";
+        document.querySelectorAll("#navbar button").forEach(el => el.style.color = "#fff");
     }
 
     if (curr > sec2) {
-        $(".navbar").css("background", "#ff8383");
-        $(".navbar button").css("color", "#00fb71");
+        document.getElementById("navbar").style.background = "#ff8383";
+        document.querySelectorAll("#navbar button").forEach(el => el.style.color = "#00fb71");
     }
 
     if (curr > sec3) {
-        $(".navbar").css("background", "#ff4c4c");
-        $(".navbar button").css("color", "#fbe900");
+        document.getElementById("navbar").style.background = "#ff4c4c";
+        document.querySelectorAll("#navbar button").forEach(el => el.style.color = "#fbe900");
     }
 
 });

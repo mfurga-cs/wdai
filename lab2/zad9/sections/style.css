@@ -19,12 +19,12 @@ a {
     text-decoration: none;
 }
 
-.header {
+#header {
     position: sticky;
     top: 0;
 }
 
-.navbar {
+#navbar {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
