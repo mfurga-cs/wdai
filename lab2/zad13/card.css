@@ -18,7 +18,7 @@
 }
 
 .profile-card .profile-body {
-    background-color: var(--white);
+    background-color: #fff;
     padding: 20px 40px 40px 40px;
 }
 
@@ -39,7 +39,6 @@
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
-
 }
 
 .profile-card .profile-body .intro {
@@ -67,19 +66,12 @@
     transition: all 0.5s ease-out;
 }
 
-
 .social-icon ul li a:hover {
-    background-color: var(--dark);
-    border: 1px solid var(--dark);
+    background-color: #fff;
+    border: 1px solid #5938a9;
 }
 
 .social-icon ul li a i {
     line-height: 35px;
     color: #666;
-}
-
-.social-icon ul li a i:hover,
-.social-icon ul li a:hover i {
-
-    color: var(--white);
 }

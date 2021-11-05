@@ -1,16 +1,15 @@
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     background: #efefef;
     color: #464646;
     font-size: 18px;
 }
-
 
 img {
     max-width: 100%;

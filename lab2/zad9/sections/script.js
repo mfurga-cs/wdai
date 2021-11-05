@@ -15,7 +15,6 @@ $(function() {
         } else {
             $(".navbar").css("background", "#fff");
             $(".navbar button").css("color", "#fff");
-
         }
 
         if (curr > sec2) {
