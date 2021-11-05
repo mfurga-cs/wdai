@@ -1,3 +1,7 @@
+:root {
+    --current: #2285f3;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -66,7 +70,7 @@ body {
     top: 0;
     z-index: -2;
     box-shadow: 10px 0 20px rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(45deg, #007cc7, #007cc7);
+    background-image: linear-gradient(45deg, var(--current), var(--current));
 }
 
 .shoe {
@@ -98,7 +102,7 @@ body {
 }
 
 .new {
-    background-color: #2285f3;
+    background-color: var(--current);
     color: #fff;
     padding: 2px 12px;
     border-radius: 4px;
@@ -142,7 +146,7 @@ body {
 
 .active {
     border-color: #adadad;
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
 }
 
 .wrapper {
@@ -181,8 +185,8 @@ body {
     text-align: center;
 }
 
-.size:first-child {
-    background-color: #2285f3;
+.size.active {
+    background-color: var(--current);
     color: #fff;
 }
 
@@ -193,7 +197,7 @@ body {
 }
 
 .buy {
-    background-color: #2285f3;
+    background-color: var(--current);
     padding: 12px 10px;
     text-decoration: none;
     color: #fff;

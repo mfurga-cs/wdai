@@ -9,28 +9,33 @@
 </head>
 
 <body>
+    <input type="checkbox" name="submenu1" id="submenu1">
+    <input type="checkbox" name="submenu2" id="submenu2">
+    <input type="checkbox" name="submenu3" id="submenu3">
+
     <div class="container">
         <nav class="navigation">
             <ul class="mainmenu">
-                <li><a class="main" href="#">My account</a>
-                    <ul class="submenu">
+                <li><label for="submenu1" class="main">My account</label>
+                    <ul class="submenu" data-submenu="1">
                         <li><a href="#">item-1</a></li>
                         <li><a href="#">item-2</a></li>
                         <li><a href="#">item-3</a></li>
                     </ul>
                 </li>
-                <li><a class="main" href="#">About</a>
-                    <ul class="submenu">
+
+                <li><label for="submenu2" class="main">About</label>
+                    <ul class="submenu" data-submenu="2">
                         <li><a href="#">item-1</a></li>
                         <li><a href="#">item-2</a></li>
                     </ul>
                 </li>
-                <li><a class="main" href="#">Support</a>
-                    <ul class="submenu">
+                <li><label for="submenu3" class="main">Support</label>
+                    <ul class="submenu" data-submenu="3">
                         <li><a href="#">item-1</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Log out</a></li>
+                <li><label for="submenu4" class="main">Log out</label>
             </ul>
         </nav>
     </div>

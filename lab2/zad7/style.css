@@ -71,6 +71,10 @@ a {
     font-weight: 500;
 }
 
+#checkbox {
+    display: none;
+}
+
 @media only screen and (max-width: 800px) {
 
     .nav-menu {
@@ -86,10 +90,6 @@ a {
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
-    .nav-menu.active {
-        left: 0;
-    }
-
     .nav-item {
         margin: 2.5rem 0;
     }
@@ -99,16 +99,20 @@ a {
         cursor: pointer;
     }
 
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
+    #checkbox:checked ~ .nav-menu {
+        left: 0;
     }
 
-    .hamburger.active .bar:nth-child(1) {
+    #checkbox:checked ~ .hamburger .bar:nth-child(1) {
         -webkit-transform: translateY(8px) rotate(45deg);
         transform: translateY(8px) rotate(45deg);
     }
 
-    .hamburger.active .bar:nth-child(3) {
+    #checkbox:checked ~ .hamburger .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #checkbox:checked ~ .hamburger .bar:nth-child(3) {
         -webkit-transform: translateY(-8px) rotate(-45deg);
         transform: translateY(-8px) rotate(-45deg);
     }

@@ -43,9 +43,18 @@
         </div>
         <div class="gallery">
             <div class="images">
-                <img id="first" src="img/nat-1.jpg" alt="image">
-                <img id="second" src="img/nat-2.jpg" alt="image">
-                <img id="third" src="img/nat-3.jpg" alt="image">
+                <picture>
+                    <source media="(max-width:1200px)" srcset="img/nat-1.jpg">
+                    <img id="first" src="img/nat-1-large.jpg" alt="image">
+                </picture>
+                <picture>
+                    <source media="(max-width:1200px)" srcset="img/nat-2.jpg">
+                    <img id="second" src="img/nat-2-large.jpg" alt="image">
+                </picture>
+                <picture>
+                    <source media="(max-width:1200px)" srcset="img/nat-3.jpg">
+                    <img id="third" src="img/nat-3-large.jpg" alt="image">
+                </picture>
             </div>
         </div>
     </div>

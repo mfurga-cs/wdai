@@ -29,7 +29,7 @@ html {
     margin: 0;
 }
 
-.mainmenu a {
+.mainmenu a, .mainmenu .main {
     display: block;
     background-color: #ff5858;
     text-decoration: none;
@@ -41,17 +41,36 @@ html {
     position: relative;
 }
 
-.mainmenu>li:first-child>a {
+.mainmenu>li:first-child>.main {
     border-radius: 10px 10px 0 0;
 }
 
-.mainmenu>li:last-child>a {
+.mainmenu>li:last-child>.main {
     border-radius: 0 0 10px 10px;
 }
 
-.mainmenu>li:hover>.submenu {
+input {
+    display: none;
+}
+
+input#submenu1:checked ~ .container .navigation .mainmenu li ul[data-submenu="1"],
+input#submenu2:checked ~ .container .navigation .mainmenu li ul[data-submenu="2"],
+input#submenu3:checked ~ .container .navigation .mainmenu li ul[data-submenu="3"] {
     display: block;
     max-height: 200px;
+}
+
+input#submenu1:checked ~ .container .navigation label[for="submenu1"]::after,
+input#submenu2:checked ~ .container .navigation label[for="submenu2"]::after,
+input#submenu3:checked ~ .container .navigation label[for="submenu3"]::after {
+    z-index: 100;
+    content: "\A";
+    border-style: solid;
+    border-width: 10px 19px 0 19px;
+    border-color: #ff5858 transparent transparent transparent;
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
 }
 
 .submenu {
@@ -79,15 +98,16 @@ html {
     left: 0;
 }
 
-.mainmenu li:hover>.main::after {
-    z-index: 100;
-    content: "\A";
-    border-style: solid;
-    border-width: 10px 19px 0 19px;
-    border-color: #ff5858 transparent transparent transparent;
-    position: absolute;
-    bottom: -10px;
-    right: 10px;
+.main {
+    position: relative;
+}
+
+.main:hover {
+    cursor: pointer;
+}
+
+.main:last-child::after {
+    content: none !important;
 }
 
 .submenu a:hover::after {
