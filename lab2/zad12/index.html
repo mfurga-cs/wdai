@@ -9,10 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="script.js" defer></script>
 </head>
 
 <body>
+    <input type="radio" name="color" id="blue" checked>
+    <input type="radio" name="color" id="red">
+    <input type="radio" name="color" id="green">
+    <input type="radio" name="color" id="orange">
+    <input type="radio" name="color" id="black">
     <div class="container">
         <div class="card">
             <div class="background">
@@ -38,21 +42,21 @@
                 <div class="wrapper">
                     <h3 class="title">COLOR</h3>
                     <div class="wrapper-inner">
-                        <span class="color active" id="blue"></span>
-                        <span class="color" id="red"></span>
-                        <span class="color" id="green"></span>
-                        <span class="color" id="orange"></span>
-                        <span class="color" id="black"></span>
+                        <label for="blue"></label>
+                        <label for="red"></label>
+                        <label for="green"></label>
+                        <label for="orange"></label>
+                        <label for="black"></label>
                     </div>
                 </div>
                 <div class="wrapper">
                     <h3 class="title">SIZE</h3>
                     <div class="wrapper-inner">
-                        <span class="size">7</span>
-                        <span class="size active">8</span>
-                        <span class="size">9</span>
-                        <span class="size">10</span>
-                        <span class="size">11</span>
+                        <input type="radio" name="size" class="size" id="size7">
+                        <input type="radio" name="size" class="size" id="size8">
+                        <input type="radio" name="size" class="size" id="size9" checked>
+                        <input type="radio" name="size" class="size" id="size10">
+                        <input type="radio" name="size" class="size" id="size11">
                     </div>
                 </div>
                 <div class="wrapper-inner" style="justify-content: space-between;align-items: center;">
