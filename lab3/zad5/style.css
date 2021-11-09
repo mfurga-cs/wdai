@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+.container {
+  text-align: center;
+  width: 370px;
+  margin: 2em auto;
+}
+
+.inner {
+  margin: 20px 0;
+}
+
+#external {
+  width: 370px;
+  height: 370px;
+  color: #fff;
+  background: #508db9;
+}
+
+#middle {
+  width: 280px;
+  height: 280px;
+  background: #da2d2d;
+  margin: 15px auto;
+}
+
+#internal {
+  width: 180px;
+  height: 180px;
+  background-color: #f7f72d;
+  margin: 20px auto;
+  color: #000;
+}
+
+button {
+  padding: 5px;
+  font-size: 22px;
+  border-radius: 10px;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
