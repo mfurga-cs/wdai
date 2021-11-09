@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  width: 800px;
+  margin: 2em auto;
+}
+
+section {
+  margin: 30px 0;
+  padding: 20px;
+  background: #f3f3f3;
+  border-radius: 5px;
+}
+
+section header {
+  margin: 10px 0;
+}
+
+section content {
+  max-height: 300px;
+  display: block;
+  overflow: scroll;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+
+@media (max-width: 950px) {
+  .container {
+    width: 90%;
+  }
+}
+
