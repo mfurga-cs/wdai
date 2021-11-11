@@ -1,0 +1,6 @@
+{
+  "Samochody": ["Fiat", "Mercedes", "BMW", "Audi", "Citroen", "Hyundai", "Kia", "Dacia", "VW"],
+  "Rowery": ["Kross", "Merida"],
+  "Soki": ["Jupi", "Kubuś", "Hoop"]
+}
+
