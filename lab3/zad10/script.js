@@ -66,7 +66,7 @@ function pareseJson(url) {
 
   for (let category in json) {
     let products = json[category];
-    if (products === undefined) {
+    if (products === undefined || products.length == 0) {
       continue;
     }
 
