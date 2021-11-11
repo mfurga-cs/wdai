@@ -27,7 +27,7 @@ document.getElementById("add").addEventListener("click", function (event) {
   }
   
   if (!/^[0-9]{9}$/.test(tel)) {
-    alert("Błędny number telefonu.");
+    alert("Błędny numer telefonu.");
     return;
   }
 
