@@ -1,5 +1,6 @@
 "use strict";
 
+const POINTS_MISSED_SHOT = -6;
 const POINTS_PER_ZOOMBIE = 12;
 const ZOOMBIE_POS_MAX_HEIGHT = 250;
 const ZOOMBIE_POS_MIN_HEIFGT = 0;
@@ -9,17 +10,28 @@ const ZOOMBIE_MIN_SPEED = 1;
 const ZOOMBIE_MAX_SPEED = 5;
 const ZOOMBIE_MAX_PASSED = 3;
 
+let interval;
+let stop = false;
+
 const board = document.getElementById("board");
 const crosshair = document.getElementById("crosshair");
 const score = document.getElementById("score");
 const passed = document.getElementById("passed");
+const game_over = document.getElementById("game_over");
 
 let current_score = 0;
 let passed_zoombie = 0;
 
-function incScore(points) {
+function updateScore(points) {
+  if (stop) {
+    return;
+  }
   current_score += points;
-  score.innerText = current_score.toString().padStart(5, "0");
+  if (current_score >= 0) {
+    score.innerText = current_score.toString().padStart(5, "0");
+  } else {
+     score.innerText = "-" + (-1 * current_score).toString().padStart(5, "0");
+  }
 }
 
 function random(min, max) {
@@ -43,7 +55,8 @@ function generateZoombie() {
   div.addEventListener("mousedown", function(event) {
     if (event.which == 1) {
       this.remove();
-      incScore(POINTS_PER_ZOOMBIE);
+      updateScore(POINTS_PER_ZOOMBIE);
+      event.stopPropagation();
     }
   })
 
@@ -52,13 +65,22 @@ function generateZoombie() {
     passed_zoombie++;
     passed.innerText = passed_zoombie.toString();
 
-    if (ZOOMBIE_MAX_PASSED >= 3) {
-      console.log("Gave move");
+    if (passed_zoombie >= ZOOMBIE_MAX_PASSED) {
+      game_over.style.display = "block";
+      stop = true;
+      document.querySelectorAll(".zoombie").forEach(zoombie => {zoombie.remove()});
+      clearInterval(interval);
     }
   })
 
   board.appendChild(div);
 }
+
+board.addEventListener("mousedown", function(event) {
+  if (event.which == 1) {
+    updateScore(POINTS_MISSED_SHOT);
+  }
+});
 
 document.addEventListener("contextmenu", function(event) {
   event.preventDefault();
@@ -69,4 +91,4 @@ document.addEventListener("mousemove", function(event) {
   crosshair.style.top = event.pageY + "px";
 });
 
-setInterval(generateZoombie, 1000);
+interval = setInterval(generateZoombie, 1000);

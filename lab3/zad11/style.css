@@ -18,6 +18,9 @@ body {
   overflow: hidden;
   position: relative;
   cursor: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .zoombie {
@@ -92,3 +95,10 @@ body {
   color: #f00;
 }
 
+#game_over {
+  display: none;
+  font-size: 200px;
+  font-weight: bold;
+  color: #f75252;
+  user-select: none;
+}
