@@ -23,6 +23,7 @@ body {
   align-items: center;
 }
 
+
 .zoombie {
   width: 200px;
   height: 312px;  
@@ -95,10 +96,83 @@ body {
   color: #f00;
 }
 
-#game_over {
-  display: none;
-  font-size: 200px;
+#nickname {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 70px;
+  font-family: monospace;
   font-weight: bold;
-  color: #f75252;
   user-select: none;
+  color: #fff;
 }
+
+#init {
+  padding: 10px;
+  border-radius: 4px;
+  background: #313131;
+  font-size: 40px;
+  border: 1px solid #000;
+  text-align: center;
+  color: #fff;
+}
+
+#init:focus {
+  outline: none;
+}
+
+#init::placeholder {
+  color: #fff;
+}
+
+#init:hover ~ #crosshair {
+  display: none;
+}
+
+#ranking {
+  display: none;
+  background: #101010;
+  color: #fff;
+  font-size: 25px;
+  padding: 80px 130px;
+  cursor: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#ranking:hover ~ #crosshair {
+  display: none;
+}
+
+#ranking h2 {
+  color: #f75252;
+  margin-bottom: 10px;
+}
+
+#ranking table {
+  width: 100%;
+}
+
+#ranking table th {
+  border-bottom: 1px solid #fff;
+}
+
+#ranking table th, #ranking table td {
+  padding: 0.1em 1em;
+}
+
+#ranking button {
+  margin-top: 30px;
+  padding: 10px 30px;
+  border-radius: 4px;
+  background: #c7c7c7;
+  font-size: 24px;
+  text-transform: uppercase;
+  border: 1px solid #000;
+}
+
+#ranking button:hover {
+  cursor: pointer;
+}
+
