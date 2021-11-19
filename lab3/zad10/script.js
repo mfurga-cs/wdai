@@ -3,6 +3,19 @@
 let data = [];
 let selected = [];
 
+function collapse(event) {
+  this.dataset.state = (1 - this.dataset.state);
+  let list = this.parentElement.getElementsByClassName("products")[0];
+
+  if (this.dataset.state == 1) {
+    this.className = "fa fa-angle-down";
+    list.style.display = "block";
+  } else {
+    this.className = "fa fa-angle-right";
+    list.style.display = "none";
+  }
+}
+
 function updateSelected() {
   let ul = document.getElementById("selected-list");
   ul.innerHTML = "";
@@ -14,20 +27,65 @@ function updateSelected() {
   }
 }
 
-function selectProduct(event) {
-  if (this.checked) {
-    selected.push(this.labels[0].innerText);
+function selectProduct(that) {
+  if (that.checked) {
+    if (selected.indexOf(that.labels[0].innerText) === -1) {
+      selected.push(that.labels[0].innerText);
+    }
   } else {
-    selected.splice(selected.indexOf(this.labels[0].innerText), 1);
+    selected.splice(selected.indexOf(that.labels[0].innerText), 1);
   }
+
   updateSelected();
+
+  const category = document.getElementById("cat" + that.dataset.cat);
+  const list = that.closest("ul");
+  const count = [].filter.call(list.getElementsByTagName("input"), e => e.checked).length;
+
+  if (count === 0) {
+    category.checked = false;
+    category.indeterminate = false;
+  } else if (count === list.getElementsByTagName("li").length) {
+    category.checked = true;
+    category.indeterminate = false;
+  } else {
+    category.checked = false;
+    category.indeterminate = true;
+  }
+}
+
+function selectCategory(event) {
+  let list = [...this.nextSibling.nextSibling.getElementsByTagName("input")];
+
+  if (this.checked) {
+    list.forEach(elem => {elem.checked = true; selectProduct(elem)});
+  } else {
+    list.forEach(elem => {elem.checked = false; selectProduct(elem)});
+  }
 }
 
 function addCategoryWithProducts(id, category, products) {
   let list = document.getElementById("category-list");
 
+  let i = document.createElement("i");
+  i.className = "fa fa-angle-right";
+  i.dataset.state = "0";
+  i.addEventListener("click", collapse);
+
   let li = document.createElement("li");
-  li.innerHTML = '<input type="checkbox" id="cat' + id + '"><label for="cat' + id + '">' + category +'</label>';
+
+  let input = document.createElement("input");
+  input.type = "checkbox";
+  input.id = "cat" + id;
+  input.addEventListener("click", selectCategory);
+
+  let label = document.createElement("label");
+  label.htmlFor = "cat" + id;
+  label.innerText = category;
+
+  li.appendChild(i);
+  li.appendChild(input);
+  li.appendChild(label);
 
   let ul = document.createElement("ul");
   ul.className = "products";
@@ -39,8 +97,9 @@ function addCategoryWithProducts(id, category, products) {
     let input = document.createElement("input");
     input.type = "checkbox";
     input.id = productId;
+    input.dataset.cat = id;
 
-    input.addEventListener("click", selectProduct);
+    input.addEventListener("click", () => {selectProduct(input)});
 
     let label = document.createElement("label");
     label.htmlFor = productId;
