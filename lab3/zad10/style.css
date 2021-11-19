@@ -50,33 +50,6 @@ section {
   text-align: center;
 }
 
-#cat0-i {
-  font-size: 17px;
-  margin-right: 5px;
-}
-
-#cat0-i:hover {
-  cursor: pointer;
-}
-
-#abc::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f105";
-  font-weight: 900;
-  font-size: 17px;
-  margin-right: 5px;
-}
-
-/* f107 */
-
-#abc:hover::before {
-  cursor: pointer;
-}
-
-#abc ul {
-  display: none;
-}
-
 @media (max-width: 1100px) {
   .container {
     width: 90%;
