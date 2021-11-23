@@ -1,0 +1,28 @@
+<div class="calc">
+
+  <input type="text" class="screen" disabled [value]="result">
+  
+  <div class="keys">
+  
+    <button (click)="num(7)" type="button" value="7">7</button>
+    <button (click)="num(8)" type="button" value="8">8</button>
+    <button (click)="num(9)" type="button" value="9">9</button>
+    <button (click)="op('*')" type="button" value="*">&times;</button>
+
+    <button (click)="num(4)" type="button" value="4">4</button>
+    <button (click)="num(5)" type="button" value="5">5</button>
+    <button (click)="num(6)" type="button" value="6">6</button>
+    <button (click)="op('/')" type="button" value="/">&divide;</button>
+
+    <button (click)="num(1)" type="button" value="1">1</button>
+    <button (click)="num(2)" type="button" value="2">2</button>
+    <button (click)="num(3)" type="button" value="3">3</button>
+    <button (click)="op('+')" type="button" value="+">+</button>
+
+    <button (click)="num(0)" type="button" value="0">0</button>
+    <button (click)="op('ac')" type="button" id="ac" value="ac">AC</button>
+    <button (click)="op('=')" type="button" value="=">=</button>
+    <button (click)="op('-')" type="button" value="-">-</button>
+
+  </div>
+</div>

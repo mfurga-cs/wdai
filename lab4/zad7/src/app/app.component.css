@@ -1,0 +1,44 @@
+.calc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  border: 1px solid #ddd;
+  transform: translate(-50%, -50%);
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.screen {
+  width: 100%;
+  font-size: 40px;
+  height: 65px;
+  background: #404040;
+  color: #fff;
+  text-align: right;
+  padding-right: 25px;
+}
+
+button {
+  height: 60px;
+  background: #fff;
+  border-radius: 4px;
+  color: #333;
+  border: 1px solid #ddd;
+  font-size: 26px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#ac {
+  background-color: #c50008;
+  border-color: #920006;
+  color: #fff;
+}
