@@ -1,0 +1,17 @@
+.wrapper {
+  background: #ff9494;
+  padding: 30px;
+}
+
+button {
+  padding: 20px 40px;
+  border: 3px solid #ffdcdc;
+  font-size: 20px;
+  margin-right: 20px;
+  background: #ffe9e9;
+}
+
+button:hover {
+  cursor: pointer;
+}
+

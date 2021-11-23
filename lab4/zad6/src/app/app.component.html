@@ -1,0 +1,6 @@
+<div class="container">
+  <app-child [isBlocked]="block" (changed)="printClicks($event)"></app-child>
+  <div class="wrapper">
+    <p>Liczba kliknięć: {{ clicks }}</p>
+  </div>
+</div>
