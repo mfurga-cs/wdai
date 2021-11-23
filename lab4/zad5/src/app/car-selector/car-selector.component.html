@@ -1,0 +1,42 @@
+<section>
+  <header>
+    <h1>Wybierz samochód</h1>
+  </header>
+  <content>
+    <div id="selector">
+      <div id="brand-selector">
+        <select [(ngModel)]="selectedBrand" (change)="changeBrand()">
+          <option value="blank" selected disabled>Wybierz markę</option>
+          <option *ngFor="let brand of brands" value="{{ brand }}">
+            {{ brand }}
+          </option>
+        </select>
+      </div>
+
+      <div id="model-selector">
+        <select [(ngModel)]="selectedModel" (change)="changeModel()" [disabled]="modelIsDisabled">
+          <option value="blank" selected disabled>Wybierz model</option>
+          <option *ngFor="let model of models" value="{{ model }}">
+            {{ model }}
+          </option>
+        </select>
+      </div>
+
+      <div id="color-selector">
+        <select [(ngModel)]="selectedColor" (change)="changeColor()" [disabled]="colorIsDisabled">
+          <option value="blank" selected disabled>Wybierz kolor</option>
+          <option *ngFor="let color of colors" value="{{ color }}">
+            {{ color }}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div *ngIf="done" class="result">
+      <p>Wybrałeś markę: {{ selectedBrand }}, model: {{ selectedModel }}, kolor: {{ selectedColor }}</p>
+    </div>
+
+  </content>
+</section>
+
+    
