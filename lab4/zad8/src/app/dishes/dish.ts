@@ -1,4 +1,3 @@
-
 export interface Dish {
   name: string,
   cuisine: string,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { dishes } from './data';
 import { Dish } from './dish';
 
@@ -16,6 +16,9 @@ interface DishView extends Dish {
 export class DishesComponent implements OnInit {
 
   dishes: Array<DishView> = new Array<DishView>();
+
+  @Output()
+  dishUpdate: EventEmitter<{dish: Dish, op: number}> = new EventEmitter();
 
   constructor() {}
 
@@ -45,6 +48,7 @@ export class DishesComponent implements OnInit {
     }
     dish.selected++;
     dish.maxReleases--;
+    this.dishUpdate.emit({dish: dish, op: 1});
   }
 
   removeDish(dish: DishView): void {
@@ -53,5 +57,6 @@ export class DishesComponent implements OnInit {
     }
     dish.selected--;
     dish.maxReleases++;
+    this.dishUpdate.emit({dish: dish, op: -1});
   }
 }

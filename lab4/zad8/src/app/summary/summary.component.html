@@ -1,0 +1,12 @@
+<section id="summary" [ngClass]="summaryCount < 10 ? 'orange' : 'blue'">
+  <header>
+    <h3>Podsumowanie zakupów</h3>
+  </header>
+  <content class="wrapper">
+    <ul>
+      <li *ngFor="let summary of summaryList">
+        {{ summary.count }}x {{ summary.name }} - {{ summary.totalPrice | currency }}
+      </li>
+    </ul>
+  </content>
+</section>
