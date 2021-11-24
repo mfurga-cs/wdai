@@ -1,0 +1,28 @@
+<section>
+  <content class="wrapper">
+    <div *ngFor="let dish of dishes" [ngClass]="{'dish-cheapest': dish.cheapest, 'dish-expensive': dish.expensive}" class="dish">
+      <img src="https://dummyimage.com/600x400/a8a8a8/fff" class="dish-img" alt="img">
+      <div class="dish-body">
+        <h3 class="dish-title">{{ dish.name | uppercase }}</h3>
+        <p>Kuchnia: {{ dish.cuisine | uppercase }} | Kategoria: {{ dish.category }}</p>
+        <p class="dish-ingredients">Składniki: {{ dish.ingredients.join(", ") }}</p>
+
+        <ng-template *ngIf="dish.maxReleases > 0; then thenBlock else elseBlock"></ng-template>
+        <ng-template #thenBlock><p class="dish-description">{{ dish.description }}</p></ng-template>
+        <ng-template #elseBlock><p class="danger">Brak produktu!</p></ng-template>
+        
+        <div class="dish-down">
+          <div class="buttons">
+            <button (click)="addDish(dish)" [ngClass]="{'dish-btn-disable': dish.maxReleases === 0}" class="dish-btn dish-btn-add"><i class="fa fa-plus"></i></button>
+            <button (click)="removeDish(dish)" class="dish-btn dish-btn-remove"><i class="fa fa-minus"></i></button>
+            <span>Dodano: {{ dish.selected }}</span>
+          </div>
+          <p class="dish-price">{{ dish.price | currency }}</p>
+        </div>
+      </div>
+      <div class="dish-footer">
+        <small class="text-muted" [ngClass]="{'danger': dish.maxReleases <= 3 }">Liczba możliwych dań do wydania: {{ dish.maxReleases }}</small>
+      </div>
+    </div>
+  </content>
+</section>
