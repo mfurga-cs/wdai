@@ -14,7 +14,9 @@ export class AppComponent {
     let idx = this.dishSelected.findIndex(e => e.name == dish.name);
 
     if (idx === -1) {
-      this.dishSelected.push(dish);
+      if (dish.selected !== 0) {
+        this.dishSelected.push(dish);
+      }
     } else {
       if (dish.selected === 0) {
         this.dishSelected.splice(idx, 1);
