@@ -1,4 +1,3 @@
-
 export interface Dish {
   name: string,
   cuisine: string,
@@ -9,10 +8,3 @@ export interface Dish {
   description: string,
   images: string[]
 }
-
-export interface DishView extends Dish {
-  selected: number,
-  cheapest: boolean,
-  expensive: boolean,
-}
-
