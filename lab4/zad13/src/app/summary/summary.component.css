@@ -1,0 +1,12 @@
+ul {
+  list-style-position: inside;
+}
+
+li {
+  margin: 5px 0;
+}
+
+#summary {
+  padding: 20px;
+  background: #ffddc8;
+}

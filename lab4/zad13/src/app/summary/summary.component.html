@@ -1,0 +1,12 @@
+<section id="summary">
+  <header>
+    <h3>KOSZYK Podsumowanie zakupów (wybrano {{ summaryCount }} za {{ summaryPrice | currency }})</h3>
+  </header>
+  <content class="wrapper">
+    <ul>
+      <li *ngFor="let summary of summaryList">
+        {{ summary.count }}x {{ summary.name }} - {{ summary.totalPrice | currency }}
+      </li>
+    </ul>
+  </content>
+</section>

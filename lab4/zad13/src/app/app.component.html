@@ -1,0 +1,6 @@
+<div class="container">
+  <h1 id="logo">Restauracja</h1>
+  <app-summary [dishSelected]="dishSelected"></app-summary>
+  <app-dishes (dishUpdate)="dishUpdate($event)"></app-dishes>
+  <app-form></app-form>
+</div>
