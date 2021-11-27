@@ -1,0 +1,62 @@
+#dish-add {
+  padding: 20px;
+  background: #efefef;
+}
+
+header {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  margin: 10px 0;
+}
+
+input[type=submit] {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+  font-size: 18px;
+}
+
+input[type=submit]:focus {
+  color: #fff;
+  box-shadow: 0 0 0 0.2rem rgb(40 167 69 / 50%);
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+input[type=submit]:disabled {
+  background: #d4d4d4;
+  border-color: #bbb;
+  color: #3c3c3c;
+  cursor: not-allowed;
+}
+
+input:focus {
+  color: #495057;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DishesComponent } from './components/dishes/dishes.component';
@@ -20,7 +21,8 @@ import { DishAddComponent } from './components/dish-add/dish-add.component';
     DishAddComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [DishService, CartService],
   bootstrap: [AppComponent]

@@ -19,12 +19,4 @@ export class DishesListComponent implements OnInit {
       this.dishes = dishes;
     });
   }
-
-  removeDish(dish: Dish): void {
-    this.dishService.remove(dish);
-  }
-
-  show() {
-    console.log(this.dishes);
-  }
 }
