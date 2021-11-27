@@ -1,0 +1,13 @@
+<section id="cart" [ngClass]="totalCount < 10 ? 'orange' : 'blue'">
+  <header>
+    <h3>Podsumowanie zakupów (KOSZYK)</h3>
+  </header>
+  <content>
+    <ul>
+      <li *ngFor="let dish of dishesGroup">
+        {{ dish.count}}x {{ dish.name }} ({{ dish.price | currency }})
+      </li>
+    </ul>
+    <p class="summary">Suma {{ totalPrice | currency }} z {{ totalCount }}</p>
+  </content>
+</section>
