@@ -14,7 +14,7 @@ export class DishesListItemComponent implements OnInit {
   @Input()
   dish: Dish;
 
-  inCart: Number = 0;
+  inCart: number = 0;
 
   constructor(private dishService: DishService, 
               private cartService: CartService) { }

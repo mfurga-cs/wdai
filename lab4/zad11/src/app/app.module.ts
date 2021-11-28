@@ -10,6 +10,7 @@ import { DishesListComponent } from './components/dishes-list/dishes-list.compon
 import { DishesListItemComponent } from './components/dishes-list-item/dishes-list-item.component';
 import { CartComponent } from './components/cart/cart.component';
 import { DishAddComponent } from './components/dish-add/dish-add.component';
+import { DishRankingComponent } from './components/dish-ranking/dish-ranking.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DishAddComponent } from './components/dish-add/dish-add.component';
     DishesListItemComponent,
     CartComponent,
     DishAddComponent,
+    DishRankingComponent,
   ],
   imports: [
     BrowserModule,

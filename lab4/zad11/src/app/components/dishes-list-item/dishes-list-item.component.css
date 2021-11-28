@@ -18,6 +18,12 @@ img {
   border-radius: .25rem;
 }
 
+.dish-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .dish-body {
   flex: 1 1 auto;
   padding: 1rem 1rem;

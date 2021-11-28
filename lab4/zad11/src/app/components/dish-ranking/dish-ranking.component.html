@@ -1,0 +1,6 @@
+<div (mouseout)="reset()" class="dish-star">
+  <span (mouseover)="starHover(i)" (click)="starSet(i)" *ngFor="let i of starNumbers">
+    <i *ngIf="!starFilled[i]" class="far fa-star"></i>
+    <i *ngIf="starFilled[i]" class="fas fa-star"></i>
+  </span>
+</div>
