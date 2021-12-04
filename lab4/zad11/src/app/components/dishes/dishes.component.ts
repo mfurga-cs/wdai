@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Dish } from '../../models/dish';
+import { DishService } from '../../services/dish.service';
 
 @Component({
   selector: 'app-dishes',
@@ -11,12 +12,13 @@ export class DishesComponent implements OnInit {
 
   filteredData: any;
 
-  constructor() { }
+  constructor(private dishService: DishService) { }
 
   ngOnInit(): void {
   }
 
   onFilteredDataChange(event: any): void {
     this.filteredData = event;
+    this.dishService.filter(this.filteredData);
   }
 }

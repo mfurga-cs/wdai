@@ -3,6 +3,43 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Dish } from '../models/dish';
 
 @Pipe({
+  name: 'dishFilter'
+})
+export class DishFilterPipe implements PipeTransform {
+
+  transform(dishes: Dish[], filteredData: any): Dish[] {
+    if (!dishes) {
+      return [];
+    }
+
+    let result: Dish[] = dishes;
+
+    if (filteredData.category) {
+      result = result.filter(dish => dish.category.toLowerCase().includes(filteredData.category));
+    }
+
+    if (filteredData.cuisine) {
+      result = result.filter(dish => dish.cuisine.toLowerCase().includes(filteredData.cuisine));
+    }
+
+    if (filteredData.ranking !== -1) {
+      result = result.filter(dish => dish.ranking == filteredData.ranking);
+    }
+
+    if (filteredData.minPrice !== -1) {
+      result = result.filter(dish => dish.price >= filteredData.minPrice);
+    }
+
+    if (filteredData.maxPrice !== -1) {
+      result = result.filter(dish => dish.price <= filteredData.maxPrice);
+    }
+
+    return result;
+  }
+}
+
+
+@Pipe({
   name: 'dishCategory'
 })
 export class DishCategoryPipe implements PipeTransform {

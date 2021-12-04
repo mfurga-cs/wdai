@@ -12,7 +12,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { DishAddComponent } from './components/dish-add/dish-add.component';
 import { DishRankingComponent } from './components/dish-ranking/dish-ranking.component';
 import { DishSearchComponent } from './components/dish-search/dish-search.component';
-import { DishCategoryPipe, DishCuisinePipe, DishRankingPipe, DishMinPricePipe, DishMaxPricePipe } from './pipes/dish-search.pipe';
+import { DishFilterPipe, DishCategoryPipe, DishCuisinePipe, DishRankingPipe, DishMinPricePipe, DishMaxPricePipe } from './pipes/dish-search.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { DishCategoryPipe, DishCuisinePipe, DishRankingPipe, DishMinPricePipe, D
     DishCuisinePipe,
     DishRankingPipe,
     DishMinPricePipe,
-    DishMaxPricePipe
+    DishMaxPricePipe,
+    DishFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -41,6 +41,7 @@ export class DishAddComponent implements OnInit {
     let dish = this.dishForm.value;
     dish.ingredients = dish.ingredients.split(',');
     dish.images = dish.images.split(',');
+    dish.ranking = 0;
     this.dishService.add(dish);
     this.dishForm.reset();
   }

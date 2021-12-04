@@ -11,13 +11,30 @@ import { DishService } from '../../services/dish.service';
 export class DishListComponent implements OnInit {
 
   dishes: Dish[] = [];
+  cheapestDish: Dish | null;
+  dearestDish: Dish | null;
+
   @Input() filteredData: any;
 
-  constructor(private dishService: DishService) { }
+  constructor(private dishService: DishService) {
+  }
 
   ngOnInit(): void {
-    this.dishService.getAll().subscribe(dishes => {
+    this.dishService.getFiltered().subscribe(dishes => {
       this.dishes = dishes;
+      this.cheapestDish = null;
+      this.dearestDish = null;
+
+      for (let dish of dishes) {
+        if (this.cheapestDish === null || this.cheapestDish.price > dish.price) {
+          this.cheapestDish = dish;
+        }
+
+        if (this.dearestDish === null || this.dearestDish.price < dish.price) {
+          this.dearestDish = dish;
+        }
+      }
+
     });
   }
 }
