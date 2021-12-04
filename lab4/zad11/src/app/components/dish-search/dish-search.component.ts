@@ -11,8 +11,8 @@ export class DishSearchComponent implements OnInit {
 
   categories: string[] = [];
   cuisines: string[] = [];
-  maxPrice: number;
-  minPrice: number;
+  maxPriceValue: number;
+  minPriceValue: number;
 
   @Output() filteredDataChange = new EventEmitter<any>();
 
@@ -36,9 +36,15 @@ export class DishSearchComponent implements OnInit {
         if (this.cuisines.indexOf(dish.cuisine) == -1) {
           this.cuisines.push(dish.cuisine);
         }
+      }
+    });
 
-        this.maxPrice = Math.max(this.maxPrice, dish.price);
-        this.minPrice = Math.min(this.minPrice, dish.price);
+    this.dishService.getFiltered().subscribe(dishes => {
+      this.maxPriceValue = 0;
+      this.minPriceValue = Infinity;
+      for (let dish of dishes) {
+        this.maxPriceValue = Math.max(this.maxPriceValue, dish.price);
+        this.minPriceValue = Math.min(this.minPriceValue, dish.price);
       }
     });
 
@@ -48,8 +54,8 @@ export class DishSearchComponent implements OnInit {
   private reset(): void {
     this.categories = [];
     this.cuisines = [];
-    this.maxPrice = 0;
-    this.minPrice = Infinity;
+    this.maxPriceValue = 0;
+    this.minPriceValue = Infinity;
   }
 
   update(): void {

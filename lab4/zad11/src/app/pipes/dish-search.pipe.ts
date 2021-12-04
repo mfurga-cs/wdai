@@ -14,6 +14,10 @@ export class DishFilterPipe implements PipeTransform {
 
     let result: Dish[] = dishes;
 
+    if (!filteredData) {
+      return result;
+    }
+
     if (filteredData.category) {
       result = result.filter(dish => dish.category.toLowerCase().includes(filteredData.category));
     }
