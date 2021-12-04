@@ -7,6 +7,7 @@ export class Dish {
   ingredients: string[];
   maxReleases: number;
   price: number;
+  ranking: number;
   description: string;
   images: string[];
 }

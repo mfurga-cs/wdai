@@ -6,21 +6,29 @@ import { AppComponent } from './app.component';
 import { DishesComponent } from './components/dishes/dishes.component';
 import { DishService } from './services/dish.service';
 import { CartService } from './services/cart.service';
-import { DishesListComponent } from './components/dishes-list/dishes-list.component';
-import { DishesListItemComponent } from './components/dishes-list-item/dishes-list-item.component';
+import { DishListComponent } from './components/dish-list/dish-list.component';
+import { DishListItemComponent } from './components/dish-list-item/dish-list-item.component';
 import { CartComponent } from './components/cart/cart.component';
 import { DishAddComponent } from './components/dish-add/dish-add.component';
 import { DishRankingComponent } from './components/dish-ranking/dish-ranking.component';
+import { DishSearchComponent } from './components/dish-search/dish-search.component';
+import { DishCategoryPipe, DishCuisinePipe, DishRankingPipe, DishMinPricePipe, DishMaxPricePipe } from './pipes/dish-search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     DishesComponent,
-    DishesListComponent,
-    DishesListItemComponent,
+    DishListComponent,
+    DishListItemComponent,
     CartComponent,
     DishAddComponent,
     DishRankingComponent,
+    DishSearchComponent,
+    DishCategoryPipe,
+    DishCuisinePipe,
+    DishRankingPipe,
+    DishMinPricePipe,
+    DishMaxPricePipe
   ],
   imports: [
     BrowserModule,

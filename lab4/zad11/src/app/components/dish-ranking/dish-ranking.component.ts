@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Dish } from '../../models/dish';
 
 @Component({
   selector: 'app-dish-ranking',
@@ -7,17 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DishRankingComponent implements OnInit {
 
+  @Input() dish: Dish;
+
   maxRanking: number = 5;
   starNumbers: number[] = [];
   starFilled: boolean[] = [];
   ranked: boolean = false;
 
-  constructor() {
-    this.starNumbers = Array(this.maxRanking).fill(0).map((x, i) => i);
-    this.starFilled = Array(this.maxRanking).fill(false);
-  }
+  constructor() { }
 
   ngOnInit(): void {
+    this.starNumbers = Array(this.maxRanking).fill(0).map((x, i) => i);
+    this.starFilled = Array(this.maxRanking).fill(false);
+    this.starFilled = this.starFilled.map((x, i) => i < this.dish.ranking);
+
+    this.ranked = this.dish.ranking !== 0;
   }
 
   starHover(rate: number): void {
@@ -28,13 +34,14 @@ export class DishRankingComponent implements OnInit {
 
   starSet(rate: number): void {
     if (!this.ranked) {
+      this.dish.ranking = rate + 1;
       this.ranked = true;
     }
   }
 
   reset(): void {
     if (!this.ranked) {
-      this.starFilled.fill(false);
+      this.starFilled = this.starFilled.map((x, i) => i < this.dish.ranking);
     }
   }
 

@@ -3,7 +3,7 @@
   <div class="dish-body">
     <div class="dish-head">
       <h3 class="dish-title">{{ dish.name | uppercase }}</h3>
-      <app-dish-ranking></app-dish-ranking>
+      <app-dish-ranking [dish]="dish"></app-dish-ranking>
     </div>
 
     <p>Kuchnia: {{ dish.cuisine | uppercase }} | Kategoria: {{ dish.category }}</p>

@@ -9,8 +9,14 @@ import { Dish } from '../../models/dish';
 })
 export class DishesComponent implements OnInit {
 
+  filteredData: any;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onFilteredDataChange(event: any): void {
+    this.filteredData = event;
   }
 }

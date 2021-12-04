@@ -5,11 +5,11 @@ import { DishService } from '../../services/dish.service';
 import { CartService } from '../../services/cart.service';
 
 @Component({
-  selector: 'app-dishes-list-item',
-  templateUrl: './dishes-list-item.component.html',
-  styleUrls: ['./dishes-list-item.component.css']
+  selector: 'app-dish-list-item',
+  templateUrl: './dish-list-item.component.html',
+  styleUrls: ['./dish-list-item.component.css']
 })
-export class DishesListItemComponent implements OnInit {
+export class DishListItemComponent implements OnInit {
 
   @Input()
   dish: Dish;
@@ -43,12 +43,6 @@ export class DishesListItemComponent implements OnInit {
   }
 
 }
-
-// FT3, FT4 - homry
-
-
-
-
 
 
 

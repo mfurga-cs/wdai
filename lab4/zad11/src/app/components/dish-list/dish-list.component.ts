@@ -4,13 +4,14 @@ import { Dish } from '../../models/dish';
 import { DishService } from '../../services/dish.service';
 
 @Component({
-  selector: 'app-dishes-list',
-  templateUrl: './dishes-list.component.html',
-  styleUrls: ['./dishes-list.component.css']
+  selector: 'app-dish-list',
+  templateUrl: './dish-list.component.html',
+  styleUrls: ['./dish-list.component.css']
 })
-export class DishesListComponent implements OnInit {
+export class DishListComponent implements OnInit {
 
   dishes: Dish[] = [];
+  @Input() filteredData: any;
 
   constructor(private dishService: DishService) { }
 

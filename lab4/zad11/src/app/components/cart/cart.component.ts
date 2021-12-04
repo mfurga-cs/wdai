@@ -10,7 +10,7 @@ import { CartService } from '../../services/cart.service';
 })
 export class CartComponent implements OnInit {
 
-  dishesGroup: Array<{name: string, count: number, price: number}> = [];
+  items: Array<{dish: Dish, count: number}> = [];
   totalCount: number = 0;
   totalPrice: number = 0;
 
@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartService.getAll().subscribe(dishes => {
-      this.dishesGroup = [];
+      this.items = [];
       this.totalCount = 0;
       this.totalPrice = 0;
 
@@ -26,16 +26,26 @@ export class CartComponent implements OnInit {
         this.totalCount += 1;
         this.totalPrice += dish.price;
 
-        let idx = this.dishesGroup.findIndex(e => e.name === dish.name);
+        let idx = this.items.findIndex(e => e.dish === dish);
         if (idx !== -1) {
-          this.dishesGroup[idx].count += 1;
-          this.dishesGroup[idx].price += dish.price;
+          this.items[idx].count += 1;
         } else {
-          this.dishesGroup.push({
-            "name": dish.name, "price": dish.price, "count": 1
-          });
+          this.items.push({"dish": dish, "count": 1});
         }
       }
+
+      this.items.sort((a, b) => a.dish.name > b.dish.name ? 1 : -1);
     });
   }
+
+  addToCart(dish: Dish): void {
+    console.log("Add dish to cart " + dish.name);
+    this.cartService.add(dish);
+  }
+
+  removeFromCart(dish: Dish): void {
+    console.log("Remove dish to cart " + dish.name);
+    this.cartService.remove(dish);
+  }
+
 }
