@@ -1,0 +1,20 @@
+<section id="dish-filter">
+  <header>
+    <h3>Filtrowanie</h3>
+  </header>
+  <content>
+    <div class="wrapper">
+      <select #category (change)="changeCategory($event, category.value)">
+        <option value="">Karegoria dania</option>
+        <option [value]="category" *ngFor="let category of categories">{{ category }}</option>
+      </select>
+      <select #cuisine (change)="changeCuisine($event, cuisine.value)">
+        <option value="">Typ kuchnii</option>
+        <option [value]="cuisine" *ngFor="let cuisine of cuisines">{{ cuisine }}</option>
+      </select>
+      <input #ranking (change)="changeRanking($event, ranking.value)" type="number" name="" placeholder="Ocena (od 0 do 5)">
+      <input #minPrice (change)="changeMinPrice($event, minPrice.value)" type="number" name="" placeholder="Cena od" [value]="minPriceValue">
+      <input #maxPrice (change)="changeMaxPrice($event, maxPrice.value)" type="number" name="" placeholder="Cena do" [value]="maxPriceValue">
+    </div>
+  </content>
+</section>

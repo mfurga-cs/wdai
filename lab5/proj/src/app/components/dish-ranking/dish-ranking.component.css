@@ -1,0 +1,12 @@
+.dish-star {
+  white-space: nowrap;
+  margin-left: 5px;
+}
+
+i {
+  color: #ecd102;
+}
+
+i:hover {
+  cursor: pointer;
+}

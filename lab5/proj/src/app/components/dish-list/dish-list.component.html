@@ -1,0 +1,5 @@
+<div class="wrapper">
+  <app-dish-list-item *ngFor="let dish of dishes" [ngClass]="{'dish-cheapest': dish === cheapestDish, 'dish-dearest': dish === dearestDish}" [dish]="dish">
+  </app-dish-list-item>
+</div>
+

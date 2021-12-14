@@ -1,0 +1,18 @@
+<section id="dish-add">
+  <header>
+    <h3>Dodaj nowe danie</h3>
+  </header>
+  <content class="wrapper">
+    <form [formGroup]="dishForm" (ngSubmit)="onSubmit()">
+      <input formControlName="name" type="text" placeholder="Nazwa potrawy">
+      <input formControlName="cuisine" type="text" placeholder="Kuchnia świata (np. Polska, Chińska)">
+      <input formControlName="category" type="text" placeholder="Kategoria (np. dania głowne, deser, przystawka)">
+      <input formControlName="ingredients" type="text" placeholder="Składniki (np. ogórek, makaron) (podane po przecinku)">
+      <input formControlName="maxReleases" type="number" placeholder="Maksymalna liczba wydań">
+      <input formControlName="price" type="number" placeholder="Cena">
+      <input formControlName="description" type="text" placeholder="Opis (min. 10 znaków)">
+      <input formControlName="images" type="text" placeholder="Linki do zdjęć (podane po przecinku)">
+      <input type="submit" [disabled]="!dishForm.valid" value="Dodaj">
+    </form>
+  </content>
+</section>

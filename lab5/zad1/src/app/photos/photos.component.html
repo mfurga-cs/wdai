@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">AlbumId</th>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Url</th>
+      <th scope="col">ThumbnailUrl</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let photo of photos">
+      <th scope="row">{{ photo.albumId }}</th>
+      <td><a [routerLink]="['/photos', photo.id]">{{ photo.id }}</a></td>
+      <td>{{ photo.title }}</td>
+      <td><a [routerLink]="['/photos', photo.id]">{{ photo.url }}</a></td>
+      <td>{{ photo.thumbnailUrl }}</td>
+    </tr>
+  </tbody>
+</table>

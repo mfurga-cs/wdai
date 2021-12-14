@@ -1,0 +1,19 @@
+<section id="cart" [ngClass]="totalCount < 10 ? 'orange' : 'blue'">
+  <header>
+    <h3>Podsumowanie zakupów (KOSZYK)</h3>
+  </header>
+  <content>
+    <ul>
+      <li class="item" *ngFor="let item of items">
+        <div class="item-title">{{ item.dish.name }}</div>
+        <div class="item-quantity">
+          <button (click)="addToCart(item.dish)" class="dish-btn dish-btn-inc"><i class="fa fa-plus"></i></button>
+          <span class="value">{{ item.count}}</span>
+          <button (click)="removeFromCart(item.dish)" class="dish-btn dish-btn-dec"><i class="fa fa-minus"></i></button>
+        </div>
+        <div class="item-total-price">{{ item.dish.price * item.count | currency }}</div>
+      </li>
+    </ul>
+    <p class="summary">Suma {{ totalPrice | currency }} z {{ totalCount }}</p>
+  </content>
+</section>

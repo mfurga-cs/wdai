@@ -1,0 +1,5 @@
+<section id="dishes">
+  <app-dish-search (filteredDataChange)="onFilteredDataChange($event)"></app-dish-search>
+  <app-dish-list [filteredData]="filteredData"></app-dish-list>
+</section>
+
