@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DishesComponent } from './components/dishes/dishes.component';
@@ -55,6 +55,7 @@ const appRoutes: Routes = [
     DishDetailComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),

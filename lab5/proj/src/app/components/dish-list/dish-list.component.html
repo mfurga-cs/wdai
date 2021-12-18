@@ -1,5 +1,17 @@
 <div class="wrapper">
-  <app-dish-list-item *ngFor="let dish of dishes" [ngClass]="{'dish-cheapest': dish === cheapestDish, 'dish-dearest': dish === dearestDish}" [dish]="dish">
+  <app-dish-list-item *ngFor="let dish of dishesPage" [ngClass]="{'dish-cheapest': dish === cheapestDish, 'dish-dearest': dish === dearestDish}" [dish]="dish">
   </app-dish-list-item>
 </div>
 
+<nav class="justify-content-center">
+  <ul class="pagination">
+    <li class="page-item" *ngFor="let _ of [].constructor(pages); let i = index" [ngClass]="{'active': i + 1 === currentPage}">
+      <a (click)="setPage(i + 1)" class="page-link">{{ i + 1 }}</a>
+    </li>
+  </ul>
+  <select [(ngModel)]="perPage" #asdf (change)="onPerPageChange($event)">
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="50">50</option>
+  </select>
+</nav>

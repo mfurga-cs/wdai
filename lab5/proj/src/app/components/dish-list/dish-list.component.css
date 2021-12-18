@@ -12,6 +12,44 @@
   border: 3px solid #40c730;
 }
 
+nav {
+  margin-top: 1em;
+  display: flex;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.pagination {
+  margin-right: 1em;
+}
+
+select {
+  display: block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+select:focus {
+  color: #495057;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+.justify-content-center {
+    -webkit-box-pack: center!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+
 @media screen and (max-width: 1100px) {
   .wrapper {
     grid-template-columns: 1fr 1fr;
