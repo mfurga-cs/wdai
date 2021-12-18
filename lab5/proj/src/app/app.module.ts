@@ -16,7 +16,7 @@ import { DishSearchComponent } from './components/dish-search/dish-search.compon
 import { DishFilterPipe, DishCategoryPipe, DishCuisinePipe, DishRankingPipe, DishMinPricePipe, DishMaxPricePipe } from './pipes/dish-search.pipe';
 
 
-
+import { RouterModule, Routes } from '@angular/router';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 
 // import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -24,7 +24,16 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat
 // import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule} from '@angular/fire/compat';
 import { environment } from '../environments/environment';
+import { HomeComponent } from './components/home/home.component';
+import { DishDetailComponent } from './components/dish-detail/dish-detail.component';
 
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'dishes', component: DishesComponent },
+  { path: 'dish/:id', component: DishDetailComponent },
+  { path: 'new', component: DishAddComponent },
+];
 
 @NgModule({
   declarations: [
@@ -41,13 +50,16 @@ import { environment } from '../environments/environment';
     DishRankingPipe,
     DishMinPricePipe,
     DishMaxPricePipe,
-    DishFilterPipe
+    DishFilterPipe,
+    HomeComponent,
+    DishDetailComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireModule
+    AngularFireModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [DishService, CartService],
   bootstrap: [AppComponent]

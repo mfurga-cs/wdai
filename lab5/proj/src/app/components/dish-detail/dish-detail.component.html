@@ -1,0 +1,86 @@
+<section id="dish-detail">
+  <header>
+    <h2 id="title">{{ dish.name }}</h2>
+  </header>
+  <content>
+    <div class="dish">
+      <div class="wrapper">
+        <div class="left">
+          <img class="image" src="{{ dish.images[0] }}">
+        </div>
+        <div class="right">
+          <dl class="info">
+            <dt>Kuchnia</dt>
+            <dd>{{ dish.cuisine }}</dd>
+            <dt>Kategoria</dt>
+            <dd>{{ dish.category }}</dd>
+            <dt>Składniki</dt>
+            <dd>{{ dish.ingredients }}</dd>
+
+            <dt>Opis</dt>
+            <dd>{{ dish.description }}</dd>
+
+            <dt>Liczba dań do wydania</dt>
+            <dd>{{ dish.maxReleases }}</dd>
+          </dl>
+          <hr>
+          <dl class="info">
+            <dt>Cena</dt>
+            <dd>{{ dish.price | currency }}</dd>
+          </dl>
+          <hr>
+          <dl class="info">
+            <dt>Dodaj do koszyka</dt>
+            <dd>
+              <div class="buttons">
+                <button (click)="addToCart(dish)" [ngClass]="{'dish-btn-disable': dish.maxReleases === 0}" class="dish-btn dish-btn-inc"><i class="fa fa-plus"></i></button>
+                <button (click)="removeFromCart(dish)" class="dish-btn dish-btn-dec"><i class="fa fa-minus"></i></button>
+                <span>Dodano: {{ inCart }}</span>
+              </div>
+            </dd>
+          </dl>
+          <hr>
+            <dl class="info">
+              <dt>Oceń</dt>
+              <dd><app-dish-ranking [dish]="dish"></app-dish-ranking></dd>
+            </dl>
+          <hr>
+        </div>
+      </div>
+    </div>
+
+    <div class="photos">
+      <h2>Zdjęcia</h2>
+      <div class="gallery">
+        <img class="image" *ngFor="let image of dish.images" src="{{ image }}">
+      </div>
+    </div>
+
+    <div class="reviews">
+      <h2>Recenzje</h2>
+      <div class="review" *ngFor="let review of reviews">
+        <div class="header">
+          <h1 class="title">{{ review.name }}</h1>
+          <span class="desc">Dodano przez: {{ review.nick }}.<span *ngIf="review.purchaseDate"> Data zakupu: {{ review.purchaseDate | date }}</span></span>
+        </div>
+        <div class="content">
+          {{ review.text }}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="review-new">
+      <h2>Dodaj nową recenzje</h2>
+      <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+        <input formControlName="nick" type="text" placeholder="Nick">
+        <input formControlName="name" type="text" placeholder="Nazwa recenzji">
+        <textarea formControlName="text" placeholder="Opis recenzji. Co najmniej 50 znaków i nie więcej niż 500."></textarea>
+        <input formControlName="purchaseDate" type="date">
+        <input type="submit" [disabled]="!reviewForm.valid" value="Dodaj">
+      </form>
+    </div>
+
+  </content>
+</section>
+

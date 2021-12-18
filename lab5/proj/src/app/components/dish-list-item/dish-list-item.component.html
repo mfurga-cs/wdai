@@ -1,11 +1,10 @@
-<div class="dish">
-  <img src="{{ dish.images[0] }}" class="dish-img" alt="img">
+<div class="dish card">
+  <a [routerLink]="['/dish', dish.id]"><img src="{{ dish.images[0] }}" class="dish-img" alt="img"></a>
   <div class="dish-body">
     <div class="dish-head">
-      <h3 class="dish-title">{{ dish.name | uppercase }}</h3>
-      <app-dish-ranking [dish]="dish"></app-dish-ranking>
+      <a [routerLink]="['/dish', dish.id]"><h3 class="dish-title">{{ dish.name | uppercase }}</h3></a>
+      <span *ngIf="dish.ranking > 0" style="white-space: nowrap;">Ocena: {{ dish.ranking }}/5</span>
     </div>
-
     <p>Kuchnia: {{ dish.cuisine | uppercase }} | Kategoria: {{ dish.category }}</p>
     <p class="dish-ingredients">Składniki: {{ dish.ingredients.join(", ") }}</p>
 
@@ -27,3 +26,4 @@
     <button (click)="remove($event)" class="dish-btn-remove">Usuń</button>
   </div>
 </div>
+

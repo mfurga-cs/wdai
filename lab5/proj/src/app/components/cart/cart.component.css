@@ -7,6 +7,11 @@ li {
   margin: 5px 0;
 }
 
+#title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
 #cart {
   padding: 20px;
   background: #f5f5f5;
@@ -64,4 +69,5 @@ li {
 
 .summary {
   font-weight: bold;
+  margin: 0;
 }

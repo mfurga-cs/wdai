@@ -28,6 +28,13 @@ export class DishService {
     return this.dishesSubject.pipe(map(dishes => this.dishFilterPipe.transform(dishes, this.filteredData)));
   }
 
+  getById(id: number): Observable<Dish | undefined> {
+    id = Number(id);
+    console.log("Giving id: " + id);
+    console.log("With type " + typeof id)
+    return this.dishesSubject.pipe(map(dishes => dishes.find(dish => dish.id === id)));
+  }
+
   add(dish: Dish): void {
     this.dishes.push(dish);
     this.dishesSubject.next(this.dishes);
