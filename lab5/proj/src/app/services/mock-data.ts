@@ -3,42 +3,42 @@ import { Review } from '../models/review';
 
 export const REVIEWS: Review[] = [
   {
-    dishId: "GTXL7fTOJqmndg6Y9LHN",
+    dishId: "4UoP4fd5PiqkK7o5G41Q",
     nick: "Zbyś",
     name: "Dolor sit amet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit commodo lacus, a porta augue malesuada non. Mauris tristique commodo nibh ac interdum. Sed varius sed justo sit amet varius. Donec justo augue, pharetra eu sagittis in, pretium a massa. Sed interdum erat sed quam ullamcorper blandit",
     purchaseDate: ""
   },
   {
-    dishId: "GTXL7fTOJqmndg6Y9LHN",
+    dishId: "4UoP4fd5PiqkK7o5G41Q",
     nick: "Zbyś",
     name: "Ipsum dolor sit amet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit commodo lacus, a porta augue malesuada non. Mauris tristique commodo nibh ac interdum. Sed varius sed justo sit amet varius. Donec justo augue, pharetra eu sagittis in, pretium a massa. Sed interdum erat sed quam ullamcorper blandit",
     purchaseDate: "2021-12-03"
   },
   {
-    dishId: "2",
+    dishId: "MEU5fLto9kW7gX0SYygG",
     nick: "Zbyś",
     name: "Dolor sit amet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit commodo lacus, a porta augue malesuada non. Mauris tristique commodo nibh ac interdum. Sed varius sed justo sit amet varius. Donec justo augue, pharetra eu sagittis in, pretium a massa. Sed interdum erat sed quam ullamcorper blandit",
     purchaseDate: ""
   },
   {
-    dishId: "2",
+    dishId: "MEU5fLto9kW7gX0SYygG",
     nick: "Zbyś",
     name: "Ipsum dolor sit amet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit commodo lacus, a porta augue malesuada non. Mauris tristique commodo nibh ac interdum. Sed varius sed justo sit amet varius. Donec justo augue, pharetra eu sagittis in, pretium a massa. Sed interdum erat sed quam ullamcorper blandit",
     purchaseDate: "2021-12-03"
   },
   {
-    dishId: "3",
+    dishId: "PDnLT1aAUOldUANE3HjA",
     nick: "Zbyś",
     name: "Dolor sit amet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit commodo lacus, a porta augue malesuada non. Mauris tristique commodo nibh ac interdum. Sed varius sed justo sit amet varius. Donec justo augue, pharetra eu sagittis in, pretium a massa. Sed interdum erat sed quam ullamcorper blandit",
     purchaseDate: ""
   },
   {
-    dishId: "3",
+    dishId: "PDnLT1aAUOldUANE3HjA",
     nick: "Zbyś",
     name: "Ipsum dolor sit amet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit commodo lacus, a porta augue malesuada non. Mauris tristique commodo nibh ac interdum. Sed varius sed justo sit amet varius. Donec justo augue, pharetra eu sagittis in, pretium a massa. Sed interdum erat sed quam ullamcorper blandit",

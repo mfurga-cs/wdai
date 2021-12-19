@@ -1,7 +1,32 @@
 
+.wrapper {
+  display: flex;
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
+  padding: 15px;
+}
+
+img {
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+p {
+  padding: 5px 0;
+}
 
 /* Set the size of the div element that contains the map */
 #map {
+  margin-top: 1em;
   height: 400px;
   /* The height is 400 pixels */
   width: 100%;
