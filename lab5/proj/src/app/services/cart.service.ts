@@ -28,13 +28,15 @@ export class CartService {
     }
     dish.maxReleases--;
     this.dishes.push(dish);
+    this.dishService.update(dish);
     this.dishesSubject.next(this.dishes);
   }
 
   remove(dish: Dish): void {
-    let idx = this.dishes.indexOf(dish);
+    let idx = this.dishes.findIndex(d => d.id === dish.id);
     if (idx !== -1) {
       dish.maxReleases++;
+      this.dishService.update(dish);
       this.dishes.splice(idx, 1);
       this.dishesSubject.next(this.dishes);
     }
