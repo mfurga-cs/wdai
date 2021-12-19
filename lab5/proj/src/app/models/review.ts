@@ -1,6 +1,6 @@
 
 export class Review {
-  dishId: number;
+  dishId: string;
   nick: string;
   name: string;
   text: string;

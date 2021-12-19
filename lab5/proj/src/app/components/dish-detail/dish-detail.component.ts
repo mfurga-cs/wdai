@@ -40,14 +40,14 @@ export class DishDetailComponent implements OnInit {
         return;
       }
       this.dish = dish;
-    });
 
-    this.cartService.getByDish(this.dish).subscribe(dishes => {
-      this.inCart = dishes.length;
-    });
+      this.cartService.getByDish(this.dish).subscribe(dishes => {
+        this.inCart = dishes.length;
+      });
 
-    this.reviewService.getByDishId(this.dish.id).subscribe(reviews => {
-      this.reviews = reviews;
+      this.reviewService.getByDishId(id).subscribe(reviews => {
+        this.reviews = reviews;
+      });
     });
 
     this.reviewForm = this.formBuilder.group({

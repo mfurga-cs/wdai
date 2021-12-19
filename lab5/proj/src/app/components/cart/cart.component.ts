@@ -26,7 +26,7 @@ export class CartComponent implements OnInit {
         this.totalCount += 1;
         this.totalPrice += dish.price;
 
-        let idx = this.items.findIndex(e => e.dish === dish);
+        let idx = this.items.findIndex(e => e.dish.id === dish.id);
         if (idx !== -1) {
           this.items[idx].count += 1;
         } else {

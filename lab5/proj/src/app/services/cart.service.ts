@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject, map } from 'rxjs';
 
+import { DishService } from './dish.service';
 import { Dish } from '../models/dish';
 
 @Injectable({
@@ -11,14 +12,14 @@ export class CartService {
   private dishes: Dish[] = [];
   private dishesSubject = new BehaviorSubject<Dish[]>(this.dishes);
 
-  constructor() { }
+  constructor(private dishService: DishService) { }
 
   getAll(): Observable<Dish[]> {
     return this.dishesSubject.asObservable();
   }
 
   getByDish(dish: Dish): Observable<Dish[]> {
-    return this.dishesSubject.pipe(map(dishes => dishes.filter(d => d === dish)));
+    return this.dishesSubject.pipe(map(dishes => dishes.filter(d => d.id === dish.id)));
   }
 
   add(dish: Dish): void {
@@ -40,7 +41,7 @@ export class CartService {
   }
 
   removeDishes(dish: Dish): void {
-    this.dishes = this.dishes.filter(d => d !== dish);
+    this.dishes = this.dishes.filter(d => d.id !== dish.id);
     this.dishesSubject.next(this.dishes);
   }
 }

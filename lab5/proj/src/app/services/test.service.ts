@@ -10,7 +10,7 @@ export class TestService {
   constructor(private db: AngularFirestore) { }
 
   getAll(): Observable<any> {
-    const ref = this.db.collection<any>('/asdf');
+    const ref = this.db.collection<any>('/dishes');
     return ref.valueChanges({ idField: 'id' });
   }
 

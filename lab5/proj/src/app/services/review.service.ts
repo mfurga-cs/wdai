@@ -17,7 +17,7 @@ export class ReviewService {
     this.reviewsSubject.next(this.reviews);
   }
 
-  getByDishId(dishId: Number): Observable<Review[]> {
+  getByDishId(dishId: string): Observable<Review[]> {
     return this.reviewsSubject.pipe(map(reviews => reviews.filter(review => review.dishId === dishId)));
   }
 

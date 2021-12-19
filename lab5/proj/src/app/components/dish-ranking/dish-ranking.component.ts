@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Dish } from '../../models/dish';
+import { DishService } from '../../services/dish.service';
+
 
 @Component({
   selector: 'app-dish-ranking',
@@ -16,7 +18,7 @@ export class DishRankingComponent implements OnInit {
   starFilled: boolean[] = [];
   ranked: boolean = false;
 
-  constructor() { }
+  constructor(private dishService: DishService) { }
 
   ngOnInit(): void {
     this.starNumbers = Array(this.maxRanking).fill(0).map((x, i) => i);
@@ -36,6 +38,7 @@ export class DishRankingComponent implements OnInit {
     if (!this.ranked) {
       this.dish.ranking = rate + 1;
       this.ranked = true;
+      this.dishService.update(this.dish);
     }
   }
 

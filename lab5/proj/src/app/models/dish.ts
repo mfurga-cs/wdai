@@ -1,7 +1,7 @@
 
 /* Dish object representation. */
 export class Dish {
-  id: number;
+  id: string;
   name: string;
   cuisine: string;
   category: string;

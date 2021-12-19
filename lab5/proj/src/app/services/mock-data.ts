@@ -3,42 +3,42 @@ import { Review } from '../models/review';
 
 export const REVIEWS: Review[] = [
   {
-    dishId: 1,
+    dishId: "GTXL7fTOJqmndg6Y9LHN",
     nick: "Zbyś",
     name: "Dolor sit amet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit commodo lacus, a porta augue malesuada non. Mauris tristique commodo nibh ac interdum. Sed varius sed justo sit amet varius. Donec justo augue, pharetra eu sagittis in, pretium a massa. Sed interdum erat sed quam ullamcorper blandit",
     purchaseDate: ""
   },
   {
-    dishId: 1,
+    dishId: "GTXL7fTOJqmndg6Y9LHN",
     nick: "Zbyś",
     name: "Ipsum dolor sit amet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit commodo lacus, a porta augue malesuada non. Mauris tristique commodo nibh ac interdum. Sed varius sed justo sit amet varius. Donec justo augue, pharetra eu sagittis in, pretium a massa. Sed interdum erat sed quam ullamcorper blandit",
     purchaseDate: "2021-12-03"
   },
   {
-    dishId: 2,
+    dishId: "2",
     nick: "Zbyś",
     name: "Dolor sit amet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit commodo lacus, a porta augue malesuada non. Mauris tristique commodo nibh ac interdum. Sed varius sed justo sit amet varius. Donec justo augue, pharetra eu sagittis in, pretium a massa. Sed interdum erat sed quam ullamcorper blandit",
     purchaseDate: ""
   },
   {
-    dishId: 2,
+    dishId: "2",
     nick: "Zbyś",
     name: "Ipsum dolor sit amet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit commodo lacus, a porta augue malesuada non. Mauris tristique commodo nibh ac interdum. Sed varius sed justo sit amet varius. Donec justo augue, pharetra eu sagittis in, pretium a massa. Sed interdum erat sed quam ullamcorper blandit",
     purchaseDate: "2021-12-03"
   },
   {
-    dishId: 3,
+    dishId: "3",
     nick: "Zbyś",
     name: "Dolor sit amet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit commodo lacus, a porta augue malesuada non. Mauris tristique commodo nibh ac interdum. Sed varius sed justo sit amet varius. Donec justo augue, pharetra eu sagittis in, pretium a massa. Sed interdum erat sed quam ullamcorper blandit",
     purchaseDate: ""
   },
   {
-    dishId: 3,
+    dishId: "3",
     nick: "Zbyś",
     name: "Ipsum dolor sit amet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit commodo lacus, a porta augue malesuada non. Mauris tristique commodo nibh ac interdum. Sed varius sed justo sit amet varius. Donec justo augue, pharetra eu sagittis in, pretium a massa. Sed interdum erat sed quam ullamcorper blandit",
@@ -48,7 +48,7 @@ export const REVIEWS: Review[] = [
 
 export const DISHES: Dish[] = [
   {
-    id: 1,
+    id: "1",
     name: "Schabowy z ziemniakami",
     cuisine: "polska",
     category: "dania główne",
@@ -60,7 +60,7 @@ export const DISHES: Dish[] = [
     images: ["https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/schabowe_01.jpg"]
   },
   {
-    id: 2,
+    id: "2",
     name: "Rosół",
     cuisine: "polska",
     category: "zupa",
@@ -72,7 +72,7 @@ export const DISHES: Dish[] = [
     images: ["https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/rosol_0.jpg"]
   },
   {
-    id: 3,
+    id: "3",
     name: "Spaghetti Bolognese",
     cuisine: "włoska",
     category: "makarony",
@@ -85,7 +85,7 @@ export const DISHES: Dish[] = [
              "https://www.unileverfoodsolutions.pl/dam/global-ufs/mcos/NEE/calcmenu/recipes/PL-recipes/general/spaghetti-bolognese/main-header.jpg"]
   },
   {
-    id: 4,
+    id: "4",
     name: "Pizza",
     cuisine: "włoska",
     category: "dania główne",
@@ -97,7 +97,7 @@ export const DISHES: Dish[] = [
     images: ["https://ocdn.eu/pulscms-transforms/1/p88k9kpTURBXy83ZmI0ZjU3MmYxNDhlMDI5NTUxODQ4MDg0OTM4ZTVmMC5qcGeTlQMAzKHNFEDNC2STBc0DFM0BvJMJpjEwMThmZQaBoTAB/domowa-pizza.jpg"]
   },
   {
-    id: 5,
+    id: "5",
     name: "Sałatka cezar",
     cuisine: "włoska",
     category: "sałatki",
@@ -109,7 +109,7 @@ export const DISHES: Dish[] = [
     images: ["https://www.kuchniadoroty.pl/wp-content/uploads/2018/06/rzymska-salata.jpg"]
   },
   {
-    id: 6,
+    id: "6",
     name: "Bigos",
     cuisine: "polska",
     category: "dania główne",
@@ -121,7 +121,7 @@ export const DISHES: Dish[] = [
     images: ["https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/bigos_z_kiszonej_kapusty_01_0.jpg"]
   },
   {
-    id: 7,
+    id: "7",
     name: "Burger wołowy",
     cuisine: "stany zjednoczone",
     category: "fast food",
@@ -133,7 +133,7 @@ export const DISHES: Dish[] = [
     images: ["https://www.unileverfoodsolutions.pl/dam/global-ufs/mcos/NEE/calcmenu/recipes/PL-recipes/sandwiches/burger-francuski-z-kozim-serem-marmolad%C4%85-z-czerwonej-cebuli-i-rukol%C4%85/main-header.jpg"]
   },
   {
-    id: 8,
+    id: "8",
     name: "Sałatka gyros",
     cuisine: "polska",
     category: "sałatki",
@@ -145,7 +145,7 @@ export const DISHES: Dish[] = [
     images: ["https://przepisna.pl/file/2019/10/salatka-gyros.png"]
   },
   {
-    id: 9,
+    id: "9",
     name: "Flaki",
     cuisine: "polska",
     category: "zupa",
@@ -157,7 +157,7 @@ export const DISHES: Dish[] = [
     images: ["https://polki.pl/foto/4_3_LARGE/flaki-przepis-magdy-gessler-2460222.jpg"]
   },
   {
-    id: 10,
+    id: "10",
     name: "Naleśniki z serem",
     cuisine: "międzynarodowa",
     category: "przystawka",
@@ -169,7 +169,7 @@ export const DISHES: Dish[] = [
     images: ["https://www.nalesniki.eu/wp-content/uploads/2015/02/nalesniki_z_serem.jpg"]
   },
   {
-    id: 11,
+    id: "11",
     name: "Ryż z kurczakiem słodkokwaśny",
     cuisine: "chińska",
     category: "dania główne",
@@ -181,7 +181,7 @@ export const DISHES: Dish[] = [
     images: ["https://www.mojegotowanie.pl/media/cache/default_view/uploads/media/recipe/0002/14/ryz-z-kurczakiem-i-warzywami.jpeg"]
   },
   {
-    id: 12,
+    id: "12",
     name: "Makaroniki",
     cuisine: "francuska",
     category: "deser",
